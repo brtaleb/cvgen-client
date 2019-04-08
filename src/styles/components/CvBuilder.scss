@@ -1,0 +1,12 @@
+.CvBuilder {
+  display: flex;
+  height: 100vh;
+
+  .Divider {
+    height: 1px;
+    width: 90%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 25px 0 25px 0;
+  }
+}
