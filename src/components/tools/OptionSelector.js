@@ -4,7 +4,6 @@ import {FormControl, InputLabel, MenuItem, Select} from "@material-ui/core";
 const OptionSelector = ({type, data, selectItem}) => {
     const [state, setState] = useState({
         value: '',
-        name: 'select'
     });
 
     useEffect(() => {

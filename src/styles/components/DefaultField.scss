@@ -17,8 +17,22 @@
     padding-top: 8px;
     font-size: 11px;
     .InfoRow {
-      line-height: 1.3;
       padding-bottom: 8px;
+      textarea {
+        height: 12px;
+        font-style: italic;
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: 100%;
+        resize: none;
+      }
+      .titleInput {
+        font-weight: bold;
+      }
+      .summaryInput {
+        height: 100%;
+      }
     }
   }
 }
