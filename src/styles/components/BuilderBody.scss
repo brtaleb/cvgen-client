@@ -9,5 +9,14 @@
     width: 595px;
     height: 842px;
     background-color: #fff;
+    display: flex;
+
+    .cvLeftContent {
+      flex: 0 0 39%;
+    }
+
+    .cvRightContent {
+      flex: 0 0 61%;
+    }
   }
 }

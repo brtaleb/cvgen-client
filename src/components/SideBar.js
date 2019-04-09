@@ -36,7 +36,7 @@ const SideBar = () => {
 
     return (
         <div className="SideBar">
-            <h1>Cv Gen</h1>
+            <h1>Curriculum Vitae</h1>
 
             <DownloadButton
                 downloadPdf={() => downloadPdf()}
@@ -46,20 +46,6 @@ const SideBar = () => {
             <Divider/>
             <PersonalInfoToggle
                 togglePersonalField={(type, personalField) => togglePersonalField(type, personalField)}
-            />
-
-            <Divider/>
-            <OptionSelector
-                type="Font"
-                data={fonts}
-                selectItem={(selectedFont) => selectFont(selectedFont)}
-            />
-
-            <Divider/>
-            <OptionSelector
-                type="Theme"
-                data={themes}
-                selectItem={(selectedTheme) => selectTheme(selectedTheme)}
             />
 
             <Divider/>
@@ -76,6 +62,19 @@ const SideBar = () => {
             <FieldToggle
                 type={fieldTypes.CERTIFICATION}
                 toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}
+            />
+
+            <Divider/>
+            <OptionSelector
+                type="Font"
+                data={fonts}
+                selectItem={(selectedFont) => selectFont(selectedFont)}
+            /><br/>
+
+            <OptionSelector
+                type="Theme"
+                data={themes}
+                selectItem={(selectedTheme) => selectTheme(selectedTheme)}
             />
 
 

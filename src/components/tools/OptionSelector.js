@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import {FilledInput, FormControl, InputLabel, MenuItem, Select} from "@material-ui/core";
+import {FormControl, InputLabel, MenuItem, Select} from "@material-ui/core";
 
 const OptionSelector = ({type, data, selectItem}) => {
     const [state, setState] = useState({
         value: '',
-        name: 'select',
-        labelWidth: 0
+        name: 'select'
     });
 
     useEffect(() => {
@@ -29,15 +28,12 @@ const OptionSelector = ({type, data, selectItem}) => {
                 <InputLabel htmlFor='select'>{type}</InputLabel>
                 <Select
                     className="selectInput"
-                    variant="filled"
                     value={state.value}
                     onChange={handleChange}
-                    input={
-                        <FilledInput
-                            name="value"
-                            id="select"
-                        />
-                    }
+                    inputProps={{
+                        name: 'value',
+                        id: 'select'
+                    }}
                 >
                     <MenuItem value=""><em>Default</em></MenuItem>
                     {selectorOptions}
