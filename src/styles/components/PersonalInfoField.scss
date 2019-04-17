@@ -1,0 +1,28 @@
+.PersonalInfoField {
+  padding: 12px 10px 0;
+  font-size: 11px;
+  background-color: $primary-black;
+  color: white;
+  margin-bottom: 8px;
+
+  label {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  textarea {
+    font-style: italic;
+    margin-bottom: 8px;
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    border: none;
+    width: 100%;
+    resize: none;
+  }
+
+  .noMargin {
+    margin-bottom: 0;
+  }
+}

@@ -1,13 +1,12 @@
 import React, {useLayoutEffect, useRef, useState} from 'react'
-import TextareaAutosize from 'react-autosize-textarea'
+import TextareaAutosize from "react-autosize-textarea";
 
-const InfoRow = ({formatedDate, title, subtitle, summary, inputChange}) => {
+const HeaderField = ({name, title, summary, headerInputChange}) => {
+
     const [state, setState] = useState({
-        formatedDate: formatedDate,
         title: title,
-        subtitle: subtitle,
         summary: summary
-    })
+    });
 
     const firstUpdate = useRef(true);
     useLayoutEffect(() => {
@@ -15,7 +14,7 @@ const InfoRow = ({formatedDate, title, subtitle, summary, inputChange}) => {
             firstUpdate.current = false;
             return;
         }
-        inputChange(state);
+        headerInputChange(state);
     });
 
     const handleChange = (event) => {
@@ -26,29 +25,17 @@ const InfoRow = ({formatedDate, title, subtitle, summary, inputChange}) => {
     }
 
     return (
-        <div className="InfoRow">
+        <div className="HeaderField">
+            <h1>{name}</h1>
+
             <TextareaAutosize
-                value={state.formatedDate}
-                name="formatedDate"
-                onChange={handleChange}
-            >
-                {state.formatedDate}
-            </TextareaAutosize>
-            <TextareaAutosize
-                className="titleInput"
                 value={state.title}
                 name="title"
                 onChange={handleChange}
             >
                 {state.title}
             </TextareaAutosize>
-            <TextareaAutosize
-                value={state.subtitle}
-                name="subtitle"
-                onChange={handleChange}
-            >
-                {state.subtitle}
-            </TextareaAutosize>
+
             <TextareaAutosize
                 value={state.summary}
                 name="summary"
@@ -59,4 +46,4 @@ const InfoRow = ({formatedDate, title, subtitle, summary, inputChange}) => {
         </div>
     )
 };
-export default InfoRow;
+export default HeaderField;

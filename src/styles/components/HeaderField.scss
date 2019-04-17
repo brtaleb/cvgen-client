@@ -1,0 +1,23 @@
+.HeaderField {
+  padding: 14px 10px 3px 10px;
+  font-size: 11px;
+  background-color: $primary-black;
+  color: white;
+  text-align: center;
+
+  h1 {
+    margin: 0 0 5px 0;
+  }
+
+  textarea {
+    margin-bottom: 8px;
+    background-color: transparent;
+    color: white;
+    font-style: italic;
+    padding: 0;
+    border: none;
+    width: 100%;
+    resize: none;
+    text-align: center;
+  }
+}

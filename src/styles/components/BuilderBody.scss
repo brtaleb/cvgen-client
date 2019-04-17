@@ -13,10 +13,29 @@
 
     .cvLeftContent {
       flex: 0 0 39%;
+      display: flex;
+      flex-flow: column;
+
+      .cvLeftDraggable {
+        background-color: $primary-gray;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+      }
     }
 
     .cvRightContent {
       flex: 0 0 61%;
+      display: flex;
+      flex-flow: column;
+
+      .cvRightDraggable {
+        padding: 10px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        overflow: hidden;
+      }
     }
   }
 }

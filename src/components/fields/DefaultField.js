@@ -2,7 +2,7 @@ import React from 'react'
 
 const DefaultField = ({fieldType, children}) => {
     return (
-        <div className="DefaultField">
+        <div className="DefaultField draggable">
             <div className="fieldHeader handle">
                 {fieldType}
             </div>
