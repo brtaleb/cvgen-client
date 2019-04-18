@@ -48,7 +48,6 @@ const SideBar = () => {
                 togglePersonalField={(type, personalField) => togglePersonalField(type, personalField)}
             />
 
-            <Divider/>
             <FieldToggle
                 type={fieldTypes.EDUCATION}
                 toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}

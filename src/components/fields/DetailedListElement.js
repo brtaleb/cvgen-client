@@ -1,7 +1,7 @@
 import React, {useLayoutEffect, useRef, useState} from 'react'
 import TextareaAutosize from 'react-autosize-textarea'
 
-const InfoRow = ({formatedDate, title, subtitle, summary, inputChange}) => {
+const DetailedListElement = ({formatedDate, title, subtitle, summary, inputChange}) => {
     const [state, setState] = useState({
         formatedDate: formatedDate,
         title: title,
@@ -26,7 +26,7 @@ const InfoRow = ({formatedDate, title, subtitle, summary, inputChange}) => {
     }
 
     return (
-        <div className="InfoRow">
+        <div className="DetailedListElement">
             <TextareaAutosize
                 value={state.formatedDate}
                 name="formatedDate"
@@ -59,4 +59,4 @@ const InfoRow = ({formatedDate, title, subtitle, summary, inputChange}) => {
         </div>
     )
 };
-export default InfoRow;
+export default DetailedListElement;

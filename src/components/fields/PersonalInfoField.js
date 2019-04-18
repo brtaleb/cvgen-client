@@ -55,14 +55,14 @@ const PersonalInfoField = ({
             name="phone"
             onChange={handleChange}
         >
-            {state.phone}
+            {state.contact.phone}
         </TextareaAutosize>
         <TextareaAutosize
             value={state.contact.email}
             name="email"
             onChange={handleChange}
         >
-            {state.email}
+            {state.contact.email}
         </TextareaAutosize>
     </>;
 

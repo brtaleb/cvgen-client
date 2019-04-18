@@ -1,5 +1,4 @@
 export const fieldTypes = {
-    PERSONAL_INFO: 'Personal Info',
     CERTIFICATION: 'Certification',
     EDUCATION: 'Education',
     HOBBIES: 'Hobbies',

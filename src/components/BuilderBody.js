@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import DefaultField from "./fields/DefaultField";
-import InfoRow from "./fields/InfoRow";
+import DetailedListElement from "./fields/DetailedListElement";
 import Sortable from 'sortablejs'
 import ImageField from "./fields/ImageField";
 import HeaderField from "./fields/HeaderField";
@@ -71,14 +71,14 @@ const BuilderBody = () => {
 
                     <div className="cvRightDraggable" ref={rightContentRef}>
                         <DefaultField fieldType="Education">
-                            <InfoRow
+                            <DetailedListElement
                                 inputChange={inputChange}
                                 formatedDate="04.2009 - 11.2011"
                                 title="XYZ Company"
                                 subtitle="Junior Project Manager"
                                 summary="Responsibilities: managing and leading the project team; recruiting project staff and consultants; developing and maintaining a detailed project plan"
                             />
-                            <InfoRow
+                            <DetailedListElement
                                 inputChange={inputChange}
                                 formatedDate="04.2009 - 11.2011"
                                 title="XYZ Company"
@@ -88,14 +88,14 @@ const BuilderBody = () => {
                         </DefaultField>
 
                         <DefaultField fieldType="Education">
-                            <InfoRow
+                            <DetailedListElement
                                 inputChange={inputChange}
                                 formatedDate="04.2009 - 11.2011"
                                 title="XYZ Company"
                                 subtitle="Junior Project Manager"
                                 summary="Responsibilities: managing and leading the project team; recruiting project staff and consultants; developing and maintaining a detailed project plan"
                             />
-                            <InfoRow
+                            <DetailedListElement
                                 inputChange={inputChange}
                                 formatedDate="04.2009 - 11.2011"
                                 title="XYZ Company"
@@ -105,7 +105,7 @@ const BuilderBody = () => {
                         </DefaultField>
 
                         <DefaultField fieldType="Education">
-                            <InfoRow
+                            <DetailedListElement
                                 inputChange={inputChange}
                                 formatedDate="04.2009 - 11.2011"
                                 title="XYZ Company"

@@ -1,0 +1,72 @@
+{
+  "profil": {
+    "data": {
+      "personalInfo": {
+        "name": "John Doe",
+        "title": "Marketing Manager",
+        "summary": "Detail-oriented individual with five years of management experience looking to secure an Agile Project Manager position with ABC Company.",
+        "address": "199 Walnut St., Suite 6\nLockport, NY 14094",
+        "contact": {
+          "phone": "888000111",
+          "email": "john.doe@email.com"
+        },
+        "dateOfBirth": "23/03/1983",
+        "linkedIn": null,
+        "website": null,
+        "profilImgUrl": "image.jpg"
+      },
+      "fields": {
+        "education": [
+          {
+            "formatedDate": "2012 - 2014",
+            "title": "University of Cambridge, Cambridge, England",
+            "subtitle": "Business Marketing",
+            "summary": null
+          }
+        ],
+        "hobbies": null,
+        "projects": null,
+        "technicalSkills": [
+          {
+            "element": "Good communication",
+            "details": "written and oral skills"
+          },
+          {
+            "element": "Excellent conceptual and analytical skills",
+            "details": null
+          },
+          {
+            "element": "Effective interpersonal skills",
+            "details": null
+          }
+        ],
+        "experience": [
+          {
+            "formatedDate": "01/2012",
+            "title": "Smith & Associates - Manchester, UK Accreditation",
+            "subtitle": "Manager",
+            "summary": "Responsibilities: coordinated tracer activities; Conducted client assessments; Screened and trained new employees"
+          },
+          {
+            "formatedDate": "04/2009 - 11/2011",
+            "title": "XYZ Company",
+            "subtitle": "Junior Project Manager",
+            "summary": "Responsibilities: managing and leading the project team; recruiting project staff and consultants; developing and maintaining a detailed project plan"
+          }
+        ],
+        "languages": [
+          {
+            "element": "English",
+            "details": "Fluent"
+          },
+          {
+            "element": "French",
+            "details": "Fluent"
+          }
+        ],
+        "certifications": null
+      }
+    },
+    "layout": null
+  }
+}
