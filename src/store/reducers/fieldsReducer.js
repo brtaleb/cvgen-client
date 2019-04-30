@@ -1,14 +1,12 @@
 // import action types
 
-let initialState = {
+let initialState = {};
 
-};
+export default function fieldsReducer(state = initialState, action) {
 
-export default function fieldsReducer(state = initialState, action){
+   switch (action.type) {
 
-    switch(action.type){
-
-        default:
-            return state;
-    }
+      default:
+         return state;
+   }
 }

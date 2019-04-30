@@ -1,5 +1,5 @@
 export const fonts = [
-    "Roboto",
-    "Calibri",
-    "Times new roman"
+   "Roboto",
+   "Calibri",
+   "Times new roman"
 ];

@@ -10,74 +10,75 @@ import FieldToggle from "./tools/FieldToggle";
 import PersonalInfoToggle from "./tools/PersonalInfoToggle";
 
 const SideBar = () => {
-    const downloadPdf = () => {
-        console.log("downloadPdf");
-    };
 
-    const downloadDocx = () => {
-        console.log("downloadDocx");
-    };
+   const downloadPdf = () => {
+      console.log("downloadPdf");
+   };
 
-    const selectFont = (selectedFont) => {
-        console.log(selectedFont);
-    }
+   const downloadDocx = () => {
+      console.log("downloadDocx");
+   };
 
-    const selectTheme = (selectedTheme) => {
-        console.log(selectedTheme);
-    }
+   const selectFont = (selectedFont) => {
+      console.log(selectedFont);
+   }
 
-    const toggleField = (type, fieldSwitch) => {
-        console.log(type, fieldSwitch);
-    }
+   const selectTheme = (selectedTheme) => {
+      console.log(selectedTheme);
+   }
 
-    const togglePersonalField = (type, personalField) => {
-        console.log(type, personalField);
-    }
+   const toggleField = (type, fieldSwitch) => {
+      // console.log(type, fieldSwitch);
+   }
 
-    return (
-        <div className="SideBar">
-            <h1>Curriculum Vitae</h1>
+   const togglePersonalField = (type, personalField) => {
+      // console.log(type, personalField);
+   }
 
-            <DownloadButton
-                downloadPdf={() => downloadPdf()}
-                downloadDocx={() => downloadDocx()}
-            />
+   return (
+       <div className="SideBar">
+          <h1>Curriculum Vitae</h1>
 
-            <Divider/>
-            <PersonalInfoToggle
-                togglePersonalField={(type, personalField) => togglePersonalField(type, personalField)}
-            />
+          <DownloadButton
+              downloadPdf={() => downloadPdf()}
+              downloadDocx={() => downloadDocx()}
+          />
 
-            <FieldToggle
-                type={fieldTypes.EDUCATION}
-                toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}
-            /><br/>
+          <Divider/>
+          <PersonalInfoToggle
+              togglePersonalField={(type, personalField) => togglePersonalField(type, personalField)}
+          />
 
-            <FieldToggle
-                type={fieldTypes.EXPERIENCE}
-                toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}
-            /><br/>
+          <FieldToggle
+              type={fieldTypes.EDUCATION}
+              toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}
+          /><br/>
 
-            <FieldToggle
-                type={fieldTypes.CERTIFICATION}
-                toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}
-            />
+          <FieldToggle
+              type={fieldTypes.EXPERIENCE}
+              toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}
+          /><br/>
 
-            <Divider/>
-            <OptionSelector
-                type="Font"
-                data={fonts}
-                selectItem={(selectedFont) => selectFont(selectedFont)}
-            /><br/>
+          <FieldToggle
+              type={fieldTypes.CERTIFICATIONS}
+              toggleField={(type, fieldSwitch) => toggleField(type, fieldSwitch)}
+          />
 
-            <OptionSelector
-                type="Theme"
-                data={themes}
-                selectItem={(selectedTheme) => selectTheme(selectedTheme)}
-            />
+          <Divider/>
+          <OptionSelector
+              type="Font"
+              data={fonts}
+              selectItem={(selectedFont) => selectFont(selectedFont)}
+          /><br/>
+
+          <OptionSelector
+              type="Theme"
+              data={themes}
+              selectItem={(selectedTheme) => selectTheme(selectedTheme)}
+          />
 
 
-        </div>
-    )
+       </div>
+   )
 };
 export default SideBar;

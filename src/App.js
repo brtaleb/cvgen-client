@@ -1,12 +1,19 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import './styles/index.scss'
 import CvBuilder from "./containers/CvBuilder";
+import {StoreContext} from "./context/StoreContext";
 
 const App = () => {
-    return (
-        <div className="App">
-            <CvBuilder/>
-        </div>
-    )
+   const {actions, state} = useContext(StoreContext);
+
+   useEffect(() => {
+      actions.getProfilData();
+   }, [])
+
+   return (
+       <div className="App">
+          <CvBuilder profilData={state.profilData}/>
+       </div>
+   )
 };
 export default App;

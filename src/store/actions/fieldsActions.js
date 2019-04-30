@@ -1,10 +1,10 @@
 import axios from 'axios';
 import {
-    GET_PROFIL
+   GET_PROFIL
 } from "./actionTypes";
 
 const actionCreators = {
-  //actionName: (data) => ({type: ACTION_TYPE, payload: {data}})
+   //actionName: (data) => ({type: ACTION_TYPE, payload: {data}})
 };
 
 

@@ -16,8 +16,10 @@
   .fieldContent {
     padding-top: 8px;
     font-size: 11px;
-    .DetailedListElement {
+
+    .DetailedListElement, .BasicListElement {
       padding-bottom: 8px;
+
       textarea {
         background-color: inherit;
         font-style: italic;
@@ -27,7 +29,19 @@
         width: 100%;
         resize: none;
       }
+
       .titleInput {
+        font-weight: bold;
+      }
+    }
+
+    .BasicListElement {
+      display: flex;
+      textarea {
+        display: inline-block;
+        flex: 1;
+      }
+      textarea:first-child {
         font-weight: bold;
       }
     }

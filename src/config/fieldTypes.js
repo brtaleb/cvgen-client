@@ -1,9 +1,16 @@
 export const fieldTypes = {
-    CERTIFICATION: 'Certification',
-    EDUCATION: 'Education',
-    HOBBIES: 'Hobbies',
-    PROJECTS: 'Projects',
-    TECHNICAL_SKILLS: 'Technical Skills',
-    EXPERIENCE: 'Experience',
-    LANGUAGES: 'Languages'
+   CERTIFICATIONS: 'Certifications',
+   EDUCATION: 'Education',
+   HOBBIES: 'Hobbies',
+   PROJECTS: 'Projects',
+   TECHNICALSKILLS: 'Technical Skills',
+   EXPERIENCE: 'Experience',
+   LANGUAGES: 'Languages'
 };
+
+export const detailedFields = [
+   'CERTIFICATIONS',
+   'EDUCATION',
+   'PROJECTS',
+   'EXPERIENCE'
+];
