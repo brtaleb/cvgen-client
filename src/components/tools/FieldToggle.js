@@ -1,38 +1,44 @@
 import React, {useState, useEffect} from 'react'
 import {Card, FormControlLabel, Switch} from "@material-ui/core";
 
-const FieldToggle = ({type, toggleField}) => {
-   const [state, setState] = useState({
-      fieldSwitch: true
-   });
+const FieldToggle = ({type, checked, toggleField, field}) => {
+  const [state, setState] = useState({
+    checked: checked,
+    changed: false
+  });
 
-   useEffect(() => {
-      toggleField(type, state.fieldSwitch);
+  useEffect(() => {
+    if (state.changed) toggleField(field, state.checked);
+    setState({
+      ...state,
+      changed: false
+    });
+  }, [state.checked]);
 
-   }, []);
+  const handleChange = name => event => {
+    setState({
+      ...state,
+      [name]: event.target.checked,
+      changed: true
+    });
+  };
 
-   const handleChange = name => event => {
-      setState({
-         ...state,
-         [name]: event.target.checked
-      });
-   };
-
-   return (
-       <Card className="FieldToggle">
-          <FormControlLabel
-              control={
-                 <Switch
-                     checked={state.fieldSwitch}
-                     onChange={handleChange('fieldSwitch')}
-                     value="fieldToggled"
-                     color="primary"
-                 />
-              }
-              label={type}
-              labelPlacement="start"
+  return (
+    <Card className="FieldToggle">
+      <FormControlLabel
+        control={
+          <Switch
+            disabled={type === 'Name' || type === 'Phone' || type === 'Email'}
+            checked={state.checked}
+            onChange={handleChange('checked')}
+            value="fieldToggled"
+            color="primary"
           />
-       </Card>
-   )
+        }
+        label={type}
+        labelPlacement="start"
+      />
+    </Card>
+  )
 };
 export default FieldToggle;

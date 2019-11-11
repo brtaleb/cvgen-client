@@ -1,97 +1,89 @@
 import React, {useEffect} from 'react'
-import DefaultField from "./fields/DefaultField";
-import DetailedListElement from "./fields/DetailedListElement";
-import Sortable from 'sortablejs'
 import ImageField from "./fields/ImageField";
 import HeaderField from "./fields/HeaderField";
 import PersonalInfoField from "./fields/PersonalInfoField";
 import FieldsMaker from "./fields/FieldsMaker";
 
-const BuilderBody = ({profilData}) => {
-   const leftContentRef = React.createRef();
+const BuilderBody = ({profilData, font}) => {
+  const personalInfo = profilData ? profilData.data.personalInfo : null;
 
-   useEffect(() => {
-      new Sortable(leftContentRef.current, {
-         group: 'shared',
-         handle: '.handle',
-         animation: 250,
-         ghostClass: 'ghost',
-         draggable: '.draggable',
-         onSort: handleOrderChange
-      });
-   })
+  useEffect(() => {
 
-   const handleOrderChange = (e) => {
-      console.log("Order Change", e);
-   }
+  })
 
-   const inputChange = (newInput) => {
-      // console.log(newInput);
-   }
+  const handleOrderChange = (e) => {
+    console.log("Order Change", e);
+  }
 
-   const headerInputChange = (newHeaderInput) => {
-      // console.log(newHeaderInput);
-   }
+  const headerInputChange = (newHeaderInput) => {
+    // console.log(newHeaderInput);
+  }
 
-   const personalInputChange = (newInfoInput) => {
-      // console.log(newInfoInput);
-   }
+  const personalInputChange = (newInfoInput) => {
+    console.log(newInfoInput);
+  }
 
-   return (
-       <div className="BuilderBody">
-          <div className="cvBody">
+  return (
+    <div style={{fontFamily: font}} className="BuilderBody">
+      <div className="cvBody">
 
-             <div className="cvLeftContent">
-                <div className="cvLeftDraggable" ref={leftContentRef}>
-                   <ImageField imgSrc="/image.jpg"/>
+        <div className="cvLeftContent">
+          <ImageField imgSrc="/image.jpg"/>
 
-                   <PersonalInfoField
-                       adress="199 Walnut St., Suite 6 Lockport, NY 14094"
-                       contact={{phone: "888000111", email: "john.doe@email.com"}}
-                       linkedin="linkedin.com/in/johndoe"
-                       personalInfoInput={personalInputChange}
-                   />
+          {
+            personalInfo ?
+              <PersonalInfoField
+                address={personalInfo.address}
+                birthDate={personalInfo.birthDate}
+                phone={personalInfo.phone}
+                email={personalInfo.email}
+                github={personalInfo.github}
+                linkedIn={personalInfo.linkedIn}
+                website={personalInfo.website}
+                fieldsToggle={profilData.layout.activeFields.personalFields}
+                personalInputChange={personalInputChange}
+              />
+              : null
+          }
 
-                   <DefaultField fieldType="Education">
-                      <DetailedListElement
-                          inputChange={inputChange}
-                          formatedDate="04.2009 - 11.2011"
-                          title="XYZ Company"
-                          subtitle="Junior Project Manager"
-                          summary="Responsibilities: managing and leading the project team; recruiting project staff and consultants; developing and maintaining a detailed project plan"
-                      />
-                      <DetailedListElement
-                          inputChange={inputChange}
-                          formatedDate="04.2009 - 11.2011"
-                          title="XYZ Company"
-                          subtitle="Junior Project Manager"
-                          summary="Responsibilities: managing and leading the project team; recruiting project staff and consultants; developing and maintaining a detailed project plan  managing and leading the project team; recruiting project staff and consultants; developing and maintaining a detailed project plan managing and leading the project team; recruiting project staff and consultants; developing and maintaining a detailed project plan"
-                      />
-                   </DefaultField>
-                </div>
-             </div>
+          {
+            profilData ?
+              <FieldsMaker
+                rightField={false}
+                fields={profilData.data.fields}
+                handleOrderChange={handleOrderChange}
+              />
+              : null
+          }
+        </div>
 
-             <div className="cvRightContent">
-                <HeaderField
-                    name="John Doe"
-                    title="Marketing Manager"
-                    summary="Detail-oriented individual with five years of management experience looking to secure an Agile Project Manager position with ABC Company."
-                    headerInputChange={headerInputChange}
-                />
+        <div className="cvRightContent">
+          {
+            personalInfo ?
+              <HeaderField
+                name={personalInfo.name}
+                title={personalInfo.title}
+                summary={personalInfo.summary}
+                fieldsToggle={profilData.layout.activeFields.personalFields}
+                headerInputChange={headerInputChange}
+              />
+              : null
+          }
 
-                {
-                   profilData ?
-                       <FieldsMaker
-                           fields={profilData.data.fields}
-                           handleOrderChange={handleOrderChange}
-                       />
-                       : null
-                }
+          {
+            profilData ?
+              <FieldsMaker
+                rightField={true}
+                fields={profilData.data.fields}
+                handleOrderChange={handleOrderChange}
+              />
+              : null
+          }
 
-             </div>
+        </div>
 
-          </div>
-       </div>
-   )
+      </div>
+    </div>
+  )
 };
 export default BuilderBody;

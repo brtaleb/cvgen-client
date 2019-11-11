@@ -1,1 +1,3 @@
 export const GET_PROFIL = "GET_PROFIL";
+export const TOGGLE_PERSONAL_FIELD = "TOGGLE_PERSONAL_FIELD";
+export const CHANGE_FONT = "CHANGE_FONT";

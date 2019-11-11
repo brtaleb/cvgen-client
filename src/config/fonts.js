@@ -1,5 +1,17 @@
 export const fonts = [
-   "Roboto",
-   "Calibri",
-   "Times new roman"
+  "Arial",
+  "Bookman",
+  "Calibri",
+  "Comic Sans MS",
+  "Courrier",
+  "Garamond",
+  "Georgia",
+  "Helvetica",
+  "Impact",
+  "Palatino",
+  "Roboto",
+  "Times",
+  "Times New Roman",
+  "Trebuchet MS",
+  "Verdana"
 ];
